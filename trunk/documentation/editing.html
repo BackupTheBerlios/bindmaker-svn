@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <title>Editing and deleting scripts - version 1.1.7</title>
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:-661517724;}
+@list l0:level1
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:-627773914;}
+@list l1:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:572321672;}
+@list l2:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:1819316666;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:897190274;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:836429880;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:-1933408240;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:-1520768046;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:407905160;}
+@list l8:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-2106399936;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:21440966;
+	mso-list-type:hybrid;
+	mso-list-template-ids:766424140 67698689 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:91631151;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-933488624 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l12
+	{mso-list-id:790830323;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1917780374 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:794250256;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2103767308 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l14
+	{mso-list-id:1488395624;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-767672704 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l14:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style>
+</head>
+<body>
+<a name="top"></a><a href="index.html">Index</a><br>
+<a href="startup.html">Startup</a> :: <a href="creating.html">Creating
+buy scripts</a> :: Editing buy scripts :: <a href="configuration.html">Editing
+game settings</a> :: <a href="misc.html">Misc / Other</a>
+<hr style="width: 90%;" align="left"><br>
+<h1>Editing your scripts:</h1>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">There are 2 ways of editing your
+scripts.<span style="">&nbsp; </span>One will place the items into
+bind maker as if you were first creating it, the other will open it up
+in a text editor and you can edit the text by hand.<span style="">&nbsp;
+    </span><i style="">If Bind Maker is unable to reverse engineer the
+script and load it, it will open it up in the text editor dialog for
+you to edit by hand</i><span style="font-size: 9pt;"> (although it
+should be able to reverse engineer 99% of the scripts out there)</span><i
+ style="">.</i></li>
+</ul>
+<br>
+<b>Editing a script &#8220;In Bind Maker&#8221;</b>
+<br>
+<br>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Select the script in your current
+binds list that you wish to edit and right click in the Current Bind
+Settings window to bring up your menu.<span style="">&nbsp; </span>Select
+&#8220;Edit This Bind&#8221;&nbsp;<span style="font-family: Wingdings;"><span
+ style=""></span></span>
+In Bind Maker.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image024.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 1:</span></b><span
+ style="font-size: 10pt;"> Selecting the option to edit in the script
+with bind maker&#8217;s user interface</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image025.jpg" height="221" width="446"><span style="">&nbsp;
+</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 2:</span></b><span
+ style="font-size: 10pt;"> Notice that any custom commands in your
+script will show up in the check box</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><span
+ style="font-size: 10pt;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="GramE">that</span> contains your binding items
+(just as <em><strong>A_CUSTOM_SCRIPT;</strong></em> does here).</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Check, uncheck, and edit sequence of
+these items, just as if you were creating a new bind, and press the
+&#8220;Commit Edit&#8221; button in the tool bar to commit the changes.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span
+ style="font-size: 10pt;"><br>
+</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><span
+ style="font-size: 10pt;"><img src="images/image027.jpg"><span style="">&nbsp;</span></span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span
+ style="font-size: 10pt;"><span style="">&nbsp;</span><br>
+</span></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">To undo an edit in once you&#8217;ve
+selected to edit it, simply press the Undo button in the toolbar (as
+shown above).<span style="">&nbsp; </span>The &#8220;Undo&#8221; button and menu
+option only becomes available during a bind edit operation.</li>
+</ul>
+<b><br>
+Editing a script &#8220;As Text&#8221;</b>
+<br>
+<br>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Select the script in your current
+binds list that you wish to edit and right click in the Current Bind
+Settings window to bring up your menu.<span style="">&nbsp; </span>Select
+&#8220;Edit This Bind&#8221;&nbsp;<span style="font-family: Wingdings;"><span
+ style=""></span></span> As Text.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image029.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 2:</span></b><span
+ style="font-size: 10pt;"> selecting the option to edit the script in a
+text editor dialog window</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><o:p>&nbsp;</o:p></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">This will bring up the text bind item
+editor dialog window</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;
+</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image030.jpg"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><span style="">&nbsp;</span>Edit any
+items you need to by hand (or insert any other items you wish to add)
+and press &#8220;OK&#8221; to commit the changes.<span style="">&nbsp; </span>Pressing
+&#8220;Cancel&#8221; will undo the edit and no changes will be made. </li>
+</ul>
+<b><br>
+Deleting Binds</b> <br>
+<ul>
+  <li class="MsoNormal" style="">To Delete a bind, simply select the
+bind to delete and select that option in the context menu:</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image031.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">As an Additional Note</b>:<span
+ style="">&nbsp; </span>if you wish to make a script that uses a
+custom alias that you have created outside of bind maker and wish to
+include it in your script, simply create a script without that alias
+command and add it to your Current Bind Settings, then edit it as text
+and add your custom item / command here.</li>
+</ul>
+<br>
+<br>
+<a href="#top">&laquo; Back to Top </a>
+</body>
+</html>

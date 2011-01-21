@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <title>Editing configuration settings - version 1.1.7</title>
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:-661517724;}
+@list l0:level1
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:-627773914;}
+@list l1:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:572321672;}
+@list l2:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:1819316666;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:897190274;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:836429880;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:-1933408240;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:-1520768046;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:407905160;}
+@list l8:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-2106399936;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:21440966;
+	mso-list-type:hybrid;
+	mso-list-template-ids:766424140 67698689 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:91631151;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-933488624 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l12
+	{mso-list-id:790830323;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1917780374 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:794250256;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2103767308 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l14
+	{mso-list-id:1488395624;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-767672704 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l14:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+.style1 {
+	font-size: 9pt;
+	font-weight: bold;
+	font-style: italic;
+	color: #FF0000;
+}
+-->
+  </style>
+</head>
+<body>
+<a name="top"></a><a href="index.html">Index</a><br>
+<a href="startup.html">Startup</a> :: <a href="creating.html">Creating
+buy scripts</a> :: <a href="editing.html">Editing buy scripts</a> ::
+Editing game settings :: <a href="misc.html">Misc / Other</a>
+<hr style="width: 90%;" align="left"><br>
+<h1>Editing configuration settings</h1>
+<p class="MsoNormal">There is certain configuration settings that bind
+maker allow you to edit which are not in your standard options.<span
+ style="">&nbsp; </span>These items are located in your &#8220;Config
+Editor&#8221; tab.</p>
+<p class="MsoNormal" style="text-indent: 0.5in;"> <img
+ src="images/image033.jpg"></p>
+<p class="MsoNormal style1" style="text-indent: 0.5in;">Version 1.1.7
+doesn't support customization of these settings for </p>
+<p class="MsoNormal style1" style="text-indent: 0.5in;">Counter-Strike
+Source. </p>
+<p class="MsoNormal style1" style="text-indent: 0.5in;">It is however,
+more options will be available in the next release. </p>
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class="MsoNormal"><b style="">Settings Definitions</b></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">User Name </b>&#8211; this is
+the name you wish to use in-game.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><img src="images/image034.jpg" height="49" width="431"> <span
+ style="">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><br>
+</b></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">Text Color</b> &#8211; this
+allows you to change the color of your text in game.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><o:p>&nbsp;</o:p></b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><img src="images/image035.jpg" height="55" width="431">&nbsp;</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><o:p>&nbsp;</o:p></b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""> <img src="images/image036.jpg" height="128" width="640">&nbsp;</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><span
+ style="font-size: 10pt;">Sample Text Color (as white)</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><br>
+</b></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">Net Graph</b> &#8211; this is
+the graphs that show up in the corner of your screen to show you
+certain statistics about your game. <span style="">&nbsp;</span>Selecting
+the red [X] disables this option.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><b style=""><img
+ src="images/image065.jpg"> <span style="">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><o:p></o:p></b></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><b style=""><img
+ src="images/image066.jpg"> </b><span style="font-size: 10pt;"><br>
+Net Graph 1&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><o:p>&nbsp;</o:p></b></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><span
+ style="font-size: 10pt;"><img src="images/image067.jpg"> <br>
+Net Graph 2&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><b style=""><img
+ src="images/image068.jpg">&nbsp;</b></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><span
+ style="font-size: 10pt;">Net Graph 3</span></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><span
+ style="font-size: 10pt;"><br>
+</span></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">Net Graph Location</b> &#8211;
+specifies the location of your net graph in game.<span style="">&nbsp; </span>Figure
+2 shows the physical location of the graph in game:</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><img src="images/image044.jpg">&nbsp;</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 1</span></b></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><img src="images/image069.jpg">&nbsp;</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 2</span></b></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><o:p></o:p></b></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">Various Settings</b> &#8211;
+There are various settings that are and are not available in your
+standard options menu.<span style="">&nbsp; </span><span class="GramE">Hovering</span>
+your mouse over each gives you a description of each.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image070.jpg"> <span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;
+</span><b style=""><br>
+</b></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">Frame Rate</b> &#8211; allows
+you to adjust your Max FPS (frames per second) allowable in game.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image049.jpg"> <span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span><b
+ style=""><br>
+</b></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">Network Rate </b>&#8211; allows
+you to adjust the rate at which data is sent to and from the server
+across your network.<span style="">&nbsp; </span>This is useful for
+optimizing game play for faster connections.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image050.jpg"> <span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span><b
+ style=""><br>
+</b></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style="">Crosshair Adjustments </b>&#8211;
+allows you to adjust how your crosshair will look in game. The bottom
+checkbox option is also a crosshair adjustment for transparency.<span
+ style="">&nbsp;&nbsp;</span></li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;</span><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""> <img src="images/image071.jpg">&nbsp;</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><span
+ class="GramE"><b style=""><span style="font-size: 10pt;">Fig 1</span></b><span
+ style="font-size: 10pt;"> adjust</span></span><span
+ style="font-size: 10pt;"> color, size and transparency of your
+crosshairs.</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><b style=""><span
+ style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style=""></span><br>
+</b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""> <img src="images/image053.jpg"> <span style="">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><b style=""><span
+ style="font-size: 10pt;">Important Note:</span></b><span
+ style="font-size: 10pt;"> if you set the color of your crosshairs in
+bind maker and go into your games&#8217; options menu, your crosshair in
+there will most likely show up as green (as they are only able to draw
+5 different colors in that dialog window) but the color in game will be
+whatever you have selected in bind maker as long as you do not use this
+options window to change your settings (if you do, you will get a green
+crosshair again).</span></p>
+<br>
+<br>
+<a href="#top">&laquo; Back to Top </a>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <title>Creating buy scripts - version 1.1.7</title>
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:48.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:60.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc8, li.MsoToc8, div.MsoToc8
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:84.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-132;
+	mso-list-type:simple;
+	mso-list-template-ids:-661517724;}
+@list l0:level1
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:-131;
+	mso-list-type:simple;
+	mso-list-template-ids:-627773914;}
+@list l1:level1
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:-130;
+	mso-list-type:simple;
+	mso-list-template-ids:572321672;}
+@list l2:level1
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:-129;
+	mso-list-type:simple;
+	mso-list-template-ids:1819316666;}
+@list l3:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4
+	{mso-list-id:-128;
+	mso-list-type:simple;
+	mso-list-template-ids:897190274;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:-127;
+	mso-list-type:simple;
+	mso-list-template-ids:836429880;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6
+	{mso-list-id:-126;
+	mso-list-type:simple;
+	mso-list-template-ids:-1933408240;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7
+	{mso-list-id:-125;
+	mso-list-type:simple;
+	mso-list-template-ids:-1520768046;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l8
+	{mso-list-id:-120;
+	mso-list-type:simple;
+	mso-list-template-ids:407905160;}
+@list l8:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:-119;
+	mso-list-type:simple;
+	mso-list-template-ids:-2106399936;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:21440966;
+	mso-list-type:hybrid;
+	mso-list-template-ids:766424140 67698689 67698689 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l10:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11
+	{mso-list-id:91631151;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-933488624 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l11:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l11:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l12
+	{mso-list-id:790830323;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1917780374 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l13
+	{mso-list-id:794250256;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2103767308 67698703 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l13:level1
+	{mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l13:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l14
+	{mso-list-id:1488395624;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-767672704 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l14:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style>
+</head>
+<body>
+<a name="top"></a><a href="index.html">Index</a><br>
+<a href="startup.html">Startup</a> :: Creating buy scripts :: <a
+ href="editing.html">Editing buy scripts</a> :: <a
+ href="configuration.html">Editing game settings</a> :: <a
+ href="misc.html">Misc / Other</a>
+<hr style="width: 90%;" align="left"><br>
+<h1>Creating a buy script:</h1>
+<p class="MsoNormal"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Select a key on the virtual keyboard
+that you wish to bind something to:</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><img
+ src="images/image008.jpg" height="253" width="300"></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Select as many items from the Buy
+Scripting tab:</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image009.jpg" height="394" width="437"></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Version 1.1.7 allows you to bind
+single clip increments of ammo. When single clips are selected, a drop
+down will appear which allows you to specify how many single clips you
+wish to purchase. Select the number of clips you want and press the
+green check mark in the upper right hand corner. Pressing the red X
+will cancel the single clip ammo selection. </li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image078.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Type in any text that you want said in
+Say or Team Say and check off the check box next to it (checking the
+box adds the say text to your script, un-checking the box removes it
+from your script) <b style="">NOTE:</b> the checkbox MUST be checked
+in order for it to be added to your script:</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><span
+ style="">&nbsp;</span>
+<img src="images/image010.jpg" height="107" width="433"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;"><span style="">&nbsp;</span>Fig
+1: </span></b><span style="font-size: 10pt;">type some text into your
+say / team say textbox</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;"><br>
+</span></b></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><span
+ style="">&nbsp;</span>
+<img src="images/image011.jpg" height="122" width="434"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 2: </span></b><span
+ style="font-size: 10pt;"><span style="">&nbsp;</span>Click the
+checkbox for the say / team say to add it to your script</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Select a command from the Radio
+Commands drop down (pressing the red &#8220;X&#8221; to the right of the drop-down
+will remove the radio command from your script):</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image012.jpg" height="187" width="431"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 1: </span></b><span
+ style="font-size: 10pt;">Pull down the radio command dropdown</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><br>
+</p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image013.jpg" height="145" width="432"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 2: </span></b><span
+ style="font-size: 10pt;">select the radio command you want to add to
+your script<o:p><br>
+<br>
+</o:p></span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image014.jpg" height="140" width="434"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 3: </span></b><span
+ style="font-size: 10pt;">to remove the radio command, simply press the
+&#8220;X&#8221; button to the right.</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Press the &#8220;Edit Item Sequence&#8221; button,
+or context menu option of the bind items, to bring up your binding
+sequence editor.<span style="">&nbsp; </span>This arranges your items&#8217;
+order.<span style="">&nbsp; </span>Item order can be important in a
+buy script when funds are low.<span style="">&nbsp; </span>CS &amp; CZ
+will only purchase as much equipment as you have money, so put
+important items first, and luxury items last to ensure important items
+are bought when money is low.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><img
+ src="images/image016.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.5in;"><b style=""><span
+ style="font-size: 10pt;">Fig 1:</span></b><span
+ style="font-size: 10pt;"> press either the button or the menu option
+to bring up the dialog below&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image018.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 2:</span></b><span
+ style="font-size: 10pt;"> the item sequence editor dialog is used to
+re-arrange your bind items&#8217; order</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">When your buy script looks the way you
+want it, press the &#8220;<span class="GramE">[ +</span> ] Add Binds&#8221; button
+on the toolbar to add your selection to your current binds list.<span
+ style="">&nbsp; </span>(This option is also available in your context
+menu&#8217;s (right click <span class="GramE">menu&#8217;s</span>) over the bind
+items and the virtual keyboard).</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image019.jpg" height="130" width="420"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 1: </span></b><span
+ style="font-size: 10pt;">adding your bind using the toolbar&#8217;s add bind
+button</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><span
+ style="font-size: 10pt;"><br>
+</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image021.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 2:</span></b><span
+ style="font-size: 10pt;"> using the bind items&#8217; context menu&#8217;s to add
+your script</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><br>
+</p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image020.jpg"></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><b
+ style=""><span style="font-size: 10pt;">Fig 3: </span></b><span
+ style="font-size: 10pt;">using the keyboard&#8217;s context menu to add your
+script</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">You can add custom scripts directly to
+your list (assuming you know how to write them by hand) using the Add
+Custom Bind textbox:</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in; text-indent: 0.25in;">
+<img src="images/image022.jpg" height="71" width="401"><span style="">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: 0.25in;"><span style="">&nbsp;</span></p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style="">Simply <span class="GramE">add<span
+ style="">&nbsp; </span>a</span> custom bind or alias here and press
+enter or Add Bind to add it to your list of Current Bind Settings.</li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0.25in;"><br>
+</p>
+<ul style="margin-top: 0in;" type="disc">
+  <li class="MsoNormal" style=""><b style=""><span
+ style="font-size: 11pt;">ADDITIONAL INFORMATION (changes from previous
+versions to 1.1.4 and up):</span></b></li>
+  <ul style="margin-top: 0in;" type="circle">
+    <li class="MsoNormal" style=""><i style=""><span
+ style="font-size: 11pt;">In previous versions of Bind Maker</span></i><span
+ style="font-size: 11pt;">, certain items were combined.<span style="">&nbsp;
+      </span>Since the Colt (m4a1) is only available to CT&#8217;s and the
+Ak47 is only available to the T&#8217;s, these items used to be combined, but
+they are no longer done so.<span style="">&nbsp; </span>If you want to
+ensure you get the right gun, you&#8217;ll want to select both weapons for
+your buy script: EX: check off Colt and AK so that you&#8217;ll get a colt
+when you&#8217;re on CT or <span class="SpellE"><span class="GramE">Ak</span></span>
+when you&#8217;re on T with the same button. The same thing goes for any T or
+CT specific weapons or items.</span></li>
+    <li class="MsoNormal" style=""><span style="font-size: 11pt;">Previous
+versions would also add 2 flash grenade commands inline if you selected
+Flash(x2) / Flash Grenades (2 grenades), but in this version an alias
+is placed in your <span class="SpellE">autoexec.cfg</span> file (this
+file is created if none exists) for <span class="SpellE">flash<span
+ class="GramE">;flash</span></span>; which is called <span
+ class="SpellE">double_flash</span>; in CZ Bind Maker. <span style="">&nbsp;</span>Removing
+this alias from your autoexec file will cause this bind created in CZ
+Bind Maker not to work.</span></li>
+  </ul>
+</ul>
+<br>
+<br>
+<a href="#top">&laquo; Back to Top </a>
+</body>
+</html>
